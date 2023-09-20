@@ -71,7 +71,17 @@ The package comes with the `teleop_node` that republishes `sensor_msgs/msg/Joy` 
 # Usage
 
 ## Install
-For most users building from source will not be required, execute `apt-get install ros-<rosdistro>-teleop-twist-joy` to install.
+At PLSCo we will build the package from source in our repository. 
+1) Make sure you have the package 'joy_linux' installed run the bellow commands
+```
+ sudo apt-get install ros-humble-joy-linux
+```
+2) Clone this repository and colcon build
+```
+git clone git@github.com:the-parking-lot-striping-company/teleop_twist_joy.git
+cd ..
+colcon build --allow-overriding teleop_twist_joy
+```
 
 ## Run
 A launch file has been provided which has three arguments which can be changed in the terminal or via your own launch file.
